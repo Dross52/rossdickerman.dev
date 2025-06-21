@@ -28,10 +28,9 @@
     .skills-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
     .projects-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
     .skill,.project{background:white;border-radius:.75rem;padding:1rem;box-shadow:0 1px 5px rgba(0,0,0,.05);}  
-    .featured{grid-column:1/-1;position:relative;overflow:visible;}
-    .featured img.main{width:100%;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.08);}  
-    .featured img.overlay{position:absolute;width:50%;left:60%;top:-10%;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.08);z-index:-1;}
-    .project img:not(.overlay){width:100%;height:auto;border-radius:.5rem;margin-bottom:.5rem;}
+    .featured{grid-column:1/-1;}
+    .metra-imgs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:.75rem;}
+    .metra-imgs img,.project img{width:100%;height:auto;border-radius:.5rem;box-shadow:0 4px 10px rgba(0,0,0,.08);}  
     .project h3{margin:.25rem 0;}
     .project a{color:var(--accent);text-decoration:none;font-weight:600;}
     footer{text-align:center;padding:2rem 1rem;background:var(--bg-dark);color:var(--txt-dark);}  
@@ -56,7 +55,7 @@
 
   <section id="about">
     <h2>About</h2>
-    <p>I turn commuter chaos into crisp mobile UX. Shipped <strong>MetraMap</strong> with <0.1 % crashes and a 4.8★ rating, owning code + cloud from SwiftUI to AWS Lambda.
+    <p>I turn commuter chaos into crisp mobile UX. Shipped <strong>MetraMap</strong> with &lt;0.1 % crashes and a 4.8★ rating, owning code + cloud from SwiftUI to AWS Lambda.
       <br><br><a href="assets/Resume_RossDickerman.pdf" target="_blank" style="color:var(--accent);font-weight:600;">Download résumé →</a></p>
   </section>
 
@@ -77,26 +76,28 @@
   <section id="projects">
     <h2>Projects</h2>
 
-    <!-- Featured MetraMap card -->
+    <!-- Featured MetraMap card side-by-side images -->
     <div class="project featured">
-      <img src="assets/MetraMapMain.png" alt="MetraMap screenshot" class="main" />
-      <img src="assets/MetraMapLiveActivity.png" alt="MetraMap Live Activity" class="overlay" />
+      <div class="metra-imgs">
+        <img src="assets/MetraMapMain.png" alt="MetraMap main screenshot" />
+        <img src="assets/MetraMapLiveActivity.png" alt="MetraMap Live Activity screenshot" />
+      </div>
       <h3>MetraMap</h3>
       <p>Realtime Chicago Metra tracker with Dynamic Island & Live Activities.</p>
       <a href="https://apps.apple.com/us/app/metra-map/id6742105707" target="_blank">App Store →</a>
     </div>
 
-    <!-- Demo showcase -->
+    <!-- Demo showcase row -->
     <div class="projects-grid">
       <div class="project">
         <img src="assets/QSROrderDemo.gif" alt="QSR Order Live Activity demo" />
         <h3>QSR Order Tracker</h3>
-        <p>Proof‑of‑concept Live Activity for quick‑service restaurants.</p>
+        <p>Proof-of-concept Live Activity for quick-service restaurants.</p>
       </div>
       <div class="project">
         <img src="assets/MaintenanceLiveActivityDemo.gif" alt="Maintenance request demo" />
         <h3>Maintenance Request Flow</h3>
-        <p>Interactive widget + Live Activity showing multi‑stage maintenance progress.</p>
+        <p>Interactive widget + Live Activity showing multi-stage maintenance progress.</p>
       </div>
       <div class="project">
         <img src="assets/ReadingLiveActivityDemo.gif" alt="Reading activity demo" />
@@ -104,8 +105,8 @@
         <p>Experimental Live Activity displaying reading progress with animated page count.</p>
       </div>
       <div class="project">
-        <h3>Live‑Activity Push Demo</h3>
-        <p>Backend + iOS demo that pushes JWT‑signed APNs to drive background Live Activity updates.</p>
+        <h3>Live-Activity Push Demo</h3>
+        <p>Backend + iOS demo that pushes JWT-signed APNs to drive background Live Activity updates.</p>
         <a href="#" target="_blank">GitHub Repo →</a>
       </div>
     </div>
@@ -115,20 +116,21 @@
     <h2>Experience</h2>
     <p><strong>Independent iOS Developer — MetraMap</strong> (2023–Present)</p>
     <ul>
-      <li>25 K LOC MVVM codebase with Combine & Swift Concurrency</li>
-      <li>GTFS‑RT ingestion with debounce/dedupe for bandwidth savings</li>
-      <li>99.9 % crash‑free, 4.8★ rating</li>
+      <li>25 K LOC MVVM codebase with Combine & Swift Concurrency</li>
+      <li>GTFS-RT ingestion with debounce/dedupe for bandwidth savings</li>
+      <li>99.9 % crash-free, 4.8★ rating</li>
     </ul>
     <p><strong>Sterility Assurance Specialist — Medline</strong> (2021–2025)</p>
     <ul>
-      <li>Automated reporting workflows with Python & AutoHotkey, saving ~20 h/week</li>
-      <li>GUI refinements that cut review time 40 %</li>
+      <li>Automated reporting workflows with Python & AutoHotkey, saving ~20 h/week</li>
+      <li>GUI refinements that cut review time 40 %</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p><a href="mailto:ross@dickerman.dev">ross@dickerman.dev</a> · <a href="https://github.com/Dross52" target="_blank">GitHub</a> · <a href="https://linkedin.com/in/ross-dickerman-aa893078" target="_blank">LinkedIn</a></p>
+    <p>Phone: <a href="tel:+15402508953">540-250-8953</a></p>
   </section>
 
   <footer>
