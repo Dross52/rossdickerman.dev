@@ -5,40 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ross Dickerman – Mobile Engineer</title>
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --accent: #2563eb; /* blue-600 */
+      --accent:#2563eb;
       --bg-light:#f8fafc;
       --bg-dark:#0f172a;
       --txt-light:#0f172a;
       --txt-dark:#f1f5f9;
     }
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{
-      font-family:'Inter',sans-serif;
-      line-height:1.6;
-      background:var(--bg-light);
-      color:var(--txt-light);
-    }
-    header{
-      padding:3rem 1rem;
-      text-align:center;
-      background:var(--bg-dark);
-      color:var(--txt-dark);
-    }
-    header h1{font-size:2.5rem;margin-bottom:.5rem;}
+    body{font-family:'Inter',sans-serif;line-height:1.6;background:var(--bg-light);color:var(--txt-light);}  
+    header{padding:3rem 1rem;text-align:center;background:var(--bg-dark);color:var(--txt-dark);}  
+    header h1{font-size:2.5rem;margin-bottom:.5rem;}  
     header p{opacity:.8;}
     nav ul{display:flex;justify-content:center;gap:1.5rem;margin-top:1rem;list-style:none;}
     nav a{color:var(--txt-dark);text-decoration:none;font-weight:600;}
     section{max-width:960px;margin:4rem auto;padding:0 1rem;}
-    h2{font-size:1.75rem;margin-bottom:1rem;color:var(--accent);}
-    .skills-grid,.projects-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
-    .skill,.project{background:white;border-radius:.75rem;padding:1rem;box-shadow:0 1px 4px rgba(0,0,0,.05);}  
-    .project h3{margin-bottom:.5rem;}
+    h2{font-size:1.75rem;margin-bottom:1rem;color:var(--accent);}  
+    .skills-grid,.projects-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+    .skill,.project{background:white;border-radius:.75rem;padding:1rem;box-shadow:0 1px 5px rgba(0,0,0,.05);}  
+    .project img{width:100%;height:auto;border-radius:.5rem;margin-bottom:.5rem;}
+    .project h3{margin-bottom:.25rem;}
     .project a{color:var(--accent);text-decoration:none;font-weight:600;}
     footer{text-align:center;padding:2rem 1rem;background:var(--bg-dark);color:var(--txt-dark);}  
     footer a{color:var(--accent);text-decoration:none;}
@@ -47,7 +37,7 @@
 <body>
   <header>
     <h1>Ross Dickerman</h1>
-    <p>Product-minded iOS + AWS Engineer • Shipped <strong>MetraMap</strong> • Evanston, IL</p>
+    <p>Product-minded iOS + AWS Engineer · Evanston, IL</p>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -62,8 +52,9 @@
   <section id="about">
     <h2>About</h2>
     <p>
-      Product-minded mobile engineer focused on turning chaos into crisp UX. I own the stack from
-      SwiftUI front-ends to AWS back-ends and have kept <em>&lt;0.1 % crash rate</em> across thousands of sessions.
+      I turn commuter chaos into crisp mobile UX. Shipped <strong>MetraMap</strong> with &lt;0.1 % crashes and a 4.8★ rating, owning code + cloud from SwiftUI to AWS Lambda.
+      <br><br>
+      <a href="assets/Resume_RossDickerman.pdf" target="_blank" style="color:var(--accent);font-weight:600;">Download résumé →</a>
     </p>
   </section>
 
@@ -73,7 +64,7 @@
       <div class="skill">Swift 6 · SwiftUI · Combine</div>
       <div class="skill">UIKit · Core Animation</div>
       <div class="skill">Live Activities · WidgetKit</div>
-      <div class="skill">AWS Lambda · DynamoDB · EventBridge</div>
+      <div class="skill">AWS Lambda · DynamoDB</div>
       <div class="skill">Python · JWT · CI/CD</div>
       <div class="skill">MVVM · Modular Architecture</div>
       <div class="skill">XCTest · Instruments</div>
@@ -85,20 +76,35 @@
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project">
-        <h3>MetraMap <small>(App Store)</small></h3>
-        <p>Realtime Chicago Metra tracker with Live Activities & Dynamic Island support. 4.8★ rating, 99.9 % crash-free.</p>
-        <a href="https://apps.apple.com/us/app/metra-map/id6742105707" target="_blank">View on App Store →</a>
+        <img src="assets/MetraMapMain.png" alt="MetraMap screenshot" />
+        <h3>MetraMap</h3>
+        <p>Realtime Chicago Metra tracker with Dynamic Island & Live Activities.</p>
+        <a href="https://apps.apple.com/us/app/metra-map/id6742105707" target="_blank">App Store →</a>
       </div>
+
       <div class="project">
+        <img src="assets/MetraMapLiveActivity.png" alt="MetraMap Live Activity" />
         <h3>Live-Activity Push Demo</h3>
-        <p>Proof-of-concept backend that sends JWT-signed APNs to drive background Live Activity updates.</p>
-        <!-- Replace # with real URL when available -->
+        <p>Backend + iOS demo that pushes JWT-signed APNs to update Live Activities in the background.</p>
         <a href="#" target="_blank">GitHub Repo →</a>
       </div>
+
       <div class="project">
-        <h3>ParallelRouteMapKit</h3>
-        <p>Open-source helper that draws parallel transit lines natively in MapKit.</p>
-        <a href="https://github.com/Dross52/ParallelRouteMapKit" target="_blank">Github →</a>
+        <img src="assets/QSROrderDemo.gif" alt="QSR Order Live Activity demo" />
+        <h3>QSR Order Tracker</h3>
+        <p>Proof-of-concept Live Activity for quick-service restaurants, from order placed to pickup.</p>
+      </div>
+
+      <div class="project">
+        <img src="assets/MaintenanceLiveActivityDemo.gif" alt="Maintenance request demo" />
+        <h3>Maintenance Request Flow</h3>
+        <p>Interactive widget + Live Activity showing multi-stage progress for property management.</p>
+      </div>
+
+      <div class="project">
+        <img src="assets/ReadingLiveActivityDemo.gif" alt="Reading activity demo" />
+        <h3>Reading Tracker</h3>
+        <p>Experimental Live Activity displaying reading progress with animated page count.</p>
       </div>
     </div>
   </section>
@@ -107,31 +113,27 @@
     <h2>Experience</h2>
     <p><strong>Independent iOS Developer — MetraMap</strong> (2023–Present)</p>
     <ul>
-      <li>25 K LOC MVVM codebase with Combine + Swift Concurrency</li>
+      <li>25 K LOC MVVM codebase with Combine & Swift Concurrency</li>
       <li>GTFS-RT ingestion with debounce/dedupe for bandwidth savings</li>
       <li>99.9 % crash-free, 4.8★ rating</li>
     </ul>
     <p><strong>Sterility Assurance Specialist — Medline</strong> (2021–2025)</p>
     <ul>
       <li>Automated reporting workflows with Python & AutoHotkey, saving ~20 h/week</li>
-      <li>Partner-led GUI refinements that cut review time 40 %</li>
+      <li>GUI refinements that cut review time 40 %</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:ross@dickerman.dev">ross@dickerman.dev</a></p>
-    <p>GitHub: <a href="https://github.com/Dross52" target="_blank">Dross52</a> · LinkedIn: <a href="https://linkedin.com/in/ross-dickerman-aa893078" target="_blank">ross-dickerman</a></p>
+    <p><a href="mailto:ross@dickerman.dev">ross@dickerman.dev</a> · <a href="https://github.com/Dross52" target="_blank">GitHub</a> · <a href="https://linkedin.com/in/ross-dickerman-aa893078" target="_blank">LinkedIn</a></p>
     <p>Phone: <a href="tel:+15402508953">540-250-8953</a></p>
   </section>
 
   <footer>
-    © <span id="year"></span> Ross Dickerman · Built with&nbsp;💙 &nbsp;in Evanston, IL
+    © <span id="year"></span> Ross Dickerman — built with💙in Evanston, IL
   </footer>
 
-  <script>
-    // footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
