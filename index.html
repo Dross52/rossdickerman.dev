@@ -9,6 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
     :root{
       --accent:#2563eb;
       --bg-light:#f8fafc;
@@ -105,9 +119,17 @@
         <p>Experimental Live Activity displaying reading progress with animated page count.</p>
       </div>
       <div class="project">
-        <h3>Live-Activity Push Demo</h3>
-        <p>Backend + iOS demo that pushes JWT-signed APNs to drive background Live Activity updates.</p>
-        <a href="#" target="_blank">GitHub Repo →</a>
+        <h3>Live-Activity Demo</h3>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/ZaNXeg2D_ek"
+            title="Live Activity Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>Backend + iOS demo that pushes APNs to update Live Activities.</p>
       </div>
     </div>
   </section>
